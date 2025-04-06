@@ -1,0 +1,340 @@
+<html>
+ <head>
+  <title>
+   Danh mục sản phẩm
+  </title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            height: 100vh;
+            background-color: #f5f5f5;
+        }
+        .sidebar {
+            width: 250px;
+            background-color: #e0e0e0;
+            padding: 20px;
+            box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+        }
+        .sidebar img {
+            width: 50px;
+            margin-bottom: 20px;
+        }
+        .sidebar h2 {
+            font-size: 24px;
+            color: #3b5998;
+            margin-bottom: 20px;
+        }
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+        .sidebar ul li {
+            margin-bottom: 10px;
+        }
+        .sidebar ul li a {
+            text-decoration: none;
+            color: #333;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+        }
+        .sidebar ul li a i {
+            margin-right: 10px;
+        }
+        .sidebar ul li.active a {
+            background-color: #d0d0d0;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .main-content {
+            flex: 1;
+            padding: 20px;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .header h1 {
+            font-size: 24px;
+            color: #333;
+        }
+        .header .user-info {
+            font-size: 16px;
+            color: #333;
+        }
+        .content {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .content .top-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .content .top-bar button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .content .top-bar button i {
+            margin-right: 5px;
+        }
+        .content .search-bar {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .content .search-bar input {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+        .content .search-bar select {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .content table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .content table th, .content table td {
+            padding: 10px;
+            border: 1px solid #ccc;
+            text-align: left;
+        }
+        .content table th {
+            background-color: #f0f0f0;
+        }
+        .content table td a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        .content table td .edit-btn {
+            background-color: #d4edda;
+            color: #155724;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .content table td .delete-btn {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .content .pagination {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+        }
+        .content .pagination .total {
+            font-size: 16px;
+            color: #333;
+        }
+        .content .pagination .pages {
+            display: flex;
+            align-items: center;
+        }
+        .content .pagination .pages button {
+            background-color: #fff;
+            border: 1px solid #ccc;
+            padding: 5px 10px;
+            margin: 0 5px;
+            cursor: pointer;
+        }
+        .content .pagination .pages button.active {
+            background-color: #007bff;
+            color: #fff;
+            border-color: #007bff;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="sidebar">
+   <img alt="Logo" height="50" src="https://storage.googleapis.com/a1aa/image/OQFoCIUP6CM4yJM_mSlUEUEyLQwyOh7enVPZOkImxX8.jpg" width="50"/>
+   <h2>
+    STOCKB
+   </h2>
+   <ul>
+    <li class="active">
+     <a href="#">
+      <i class="fas fa-box">
+      </i>
+      Sản phẩm
+     </a>
+    </li>
+    <li>
+     <a href="#">
+      <i class="fas fa-users">
+      </i>
+      Khách hàng
+     </a>
+    </li>
+    <li>
+     <a href="#">
+      <i class="fas fa-building">
+      </i>
+      Đơn vị
+     </a>
+    </li>
+    <li>
+     <a href="#">
+      <i class="fas fa-arrow-right">
+      </i>
+      Xuất kho
+     </a>
+    </li>
+    <li>
+     <a href="#">
+      <i class="fas fa-arrow-left">
+      </i>
+      Nhập kho
+     </a>
+    </li>
+    <li>
+     <a href="#">
+      <i class="fas fa-user">
+      </i>
+      Nhân viên
+     </a>
+    </li>
+    <li>
+     <a href="#">
+      <i class="fas fa-chart-bar">
+      </i>
+      Báo cáo
+     </a>
+    </li>
+    <li>
+     <a href="#">
+      <i class="fas fa-truck">
+      </i>
+      Nhà cung cấp
+     </a>
+    </li>
+    <li>
+     <a href="#">
+      <i class="fas fa-search">
+      </i>
+      Kiểm kê sản phẩm
+     </a>
+    </li>
+   </ul>
+  </div>
+  <div class="main-content">
+   <div class="header">
+    <h1>
+     Danh mục sản phẩm
+    </h1>
+    <div class="user-info">
+     VLXD Nam Đăng
+    </div>
+   </div>
+   <div class="content">
+    <div class="top-bar">
+     <button>
+      <i class="fas fa-plus">
+      </i>
+      Tạo danh mục
+     </button>
+    </div>
+    <div class="search-bar">
+     <input placeholder="Tìm kiếm" type="text"/>
+     <select>
+      <option>
+       Hiển thị 20
+      </option>
+      <option>
+       Hiển thị 50
+      </option>
+      <option>
+       Hiển thị 100
+      </option>
+     </select>
+    </div>
+    <table>
+     <thead>
+      <tr>
+       <th>
+        Tên danh mục
+       </th>
+       <th>
+        Mô tả
+       </th>
+       <th>
+        Sản phẩm
+       </th>
+       <th>
+        Chỉnh sửa
+       </th>
+       <th>
+        Xóa
+       </th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td>
+        <a href="#">
+         Xi măng
+        </a>
+       </td>
+       <td>
+        Xi măng
+       </td>
+       <td>
+        3 sản phẩm
+       </td>
+       <td>
+        <button class="edit-btn">
+         Chỉnh sửa
+        </button>
+       </td>
+       <td>
+        <button class="delete-btn">
+         Xóa
+        </button>
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <div class="pagination">
+     <div class="total">
+      Tổng: 28
+     </div>
+     <div class="pages">
+      <button class="active">
+       1
+      </button>
+      <button>
+       2
+      </button>
+      <button>
+       &gt;
+      </button>
+     </div>
+    </div>
+   </div>
+  </div>
+ </body>
+</html>
